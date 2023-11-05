@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 html {
     box-sizing: border-box;
 }
@@ -11,8 +12,10 @@ body {
     width:70%;
     margin: 0 auto;    
     min-height:70rem;
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+
 }
-body, header {
+body, header, main, .entry, .quotation, .card  {
     display: flex;
     flex-direction: column;
 
@@ -30,34 +33,37 @@ header .logo {
     font-size:24px;
 }
 .topbar {
-    display: flex;
-    justify-content: space-between;
+   
     width:100%;
 }
+.topbar, nav ul,.hero {
+    display: flex;
+    justify-content: space-between;
+}
 nav {
-    width:450px;
+    flex-basis:45%;
 }
 nav ul {
     list-style-type: none;
-    display: flex;
-    justify-content: space-between;
+    
 }
-nav a {
+nav a, footer a {
     text-decoration: none;
+    color:inherit;
 }
 
 .call {
     background-color: #3882f6;
     color:inherit;
+    font-weight: bold;
 }
 button {
     padding:5px 20px;
-    border:1px solid transparent;
+    border:2px solid transparent;
     border-radius: 10%;
 }
 .hero {
-    display: flex;
-    justify-content: space-between;
+    
     padding-top: 80px;
     width:100%;
 }
@@ -65,45 +71,43 @@ button {
     font-size:48px;
 }
 
-.hero h2,nav a {
+.hero h2 {
     color:#E5E7EB;
     font-size: 18px;
+}
+.card img, .hero img {
+    /* this part is for aligning the alt text when there is a problem for 
+        loading the image */
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 .hero img {
     height:150px;
     width:450px;
-    border:1px solid white;
-    
-    background-color: rgb(120, 118, 118);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    border:1px solid white;    
+    background-color: rgb(120, 118, 118);    
 
 }
 .entry {
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     flex:0 2 40%;
     gap:10px;
 }
 main {
     flex:auto;
-    display: flex;
-    flex-direction: column;
+    
     align-items: center;
     justify-content: stretch;
-    gap:20px;
+    gap:28px;
     margin-bottom: 28px;
-    padding-top: 20px;
+    padding-top: 28px;
 }
 .quotation {
     flex:auto;
-    display: flex;
-    flex-direction: column;
+    
     justify-content: space-evenly;
-    padding:20px 200px;
+    padding:82px 296px;
 }
 .quotation blockquote {
     color:#1F2937;
@@ -126,17 +130,14 @@ main {
     
 }
 .card {
-    display: flex;
-    flex-direction: column;
+    
     align-items: center;
-    flex: 0 0 180px;
+    flex: 0 0 100px;
 }
 .card img {
     width:150px;
     height:150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
     border:5px solid #3882F6;
     border-radius: 8%;
 }
@@ -155,23 +156,22 @@ main {
     width:75%;
     padding:25px;
     align-items: center;
-    justify-content: space-around;
-    color: white;
+    justify-content: space-around;    
     border:2px solid transparent;
     border-radius: 10px;
     margin: 40px 0;
     color:#F9FAF8;
 }
+.action h3 {
+    font-weight: bold;
+    font-size: 24px;
+}
 .border {
-    border: 2px solid white; 
+    border-color:#F9FAF8; 
 }
 footer {
     display: flex;
     align-content: center;
     justify-content: center;
     padding:28px;
-}
-footer a {
-    text-decoration: none;
-    color:inherit;
 }
